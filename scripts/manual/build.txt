@@ -1,0 +1,11 @@
+az group create `
+    --name rg-func-app-container-manual `
+    --location westeurope `
+    --output none
+
+
+# func-manual
+# asp-manual
+# stmanual
+# appi-manual
+# crmanual
