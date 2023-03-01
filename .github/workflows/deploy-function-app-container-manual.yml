@@ -37,7 +37,7 @@ jobs:
     - name: 'Deploy Function App Container'
       uses: Azure/functions-container-action@v1
       with:
-        app-name: ${{ secrets.FUNCTION_APP_NAME_MANUAL }}
+        app-name: ${{ vars.FUNCTION_APP_NAME_MANUAL }}
         image: ${{ secrets.REGISTRY_LOGIN_SERVER_MANUAL }}/${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
 
     - name: Azure logout

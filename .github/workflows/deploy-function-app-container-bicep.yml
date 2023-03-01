@@ -37,7 +37,7 @@ jobs:
     - name: 'Deploy Function App Container'
       uses: Azure/functions-container-action@v1
       with:
-        app-name: ${{ secrets.FUNCTION_APP_NAME_BICEP }}
+        app-name: ${{ vars.FUNCTION_APP_NAME_BICEP }}
         image: ${{ secrets.REGISTRY_LOGIN_SERVER_BICEP }}/${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
 
     - name: Azure logout
